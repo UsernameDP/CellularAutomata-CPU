@@ -1,0 +1,35 @@
+Renderer:
+All it is doing is simply drawing the cells and their colors
+You should be able to pass in VAO and VBO values
+
+ComputeShader:
+
+
+Order to work :
+1. GUI
+2. RDCA (main class)
+3. Compute Shader (chemical)
+4. Compute Shader (color)
+5. Rendering
+
+6. other CAs
+
+GUI:
+
+|Classes|
+MainGUI
+SubGUI (dir)
+    -CA Console (CA Stuff & CA Setting)
+    -Settings
+|Interface|
+-SubGUI_Interface
+
+
+|Abstract Class|
+-GUIClass
+
+
+
+
+RDCA :
+

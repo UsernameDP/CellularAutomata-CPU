@@ -1,0 +1,6 @@
+mainguiheight 200
+subguiwidth 600
+windowwidth 1920
+mainguiwidth 600
+subguiheight 300
+windowheight 1080
