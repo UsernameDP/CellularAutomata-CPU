@@ -7,9 +7,9 @@ import imgui.ImString;
 import imgui.enums.ImGuiCond;
 import imgui.enums.ImGuiTabBarFlags;
 import imgui.enums.ImGuiWindowFlags;
+import modules.CA.CADataBase;
 import modules.CA.CADriver;
 import modules.CA.RDCA.RDCA;
-import modules.CA.RDCA.RDCAData;
 import modules.FileHandlers.CAFileHandler;
 import modules.GUI.MainGUI;
 
@@ -54,13 +54,15 @@ public class CA_Console implements  SubGUI_Interface{
             if(ImGui.beginTabBar("##tab1", ImGuiTabBarFlags.None)){
                 if(ImGui.beginTabItem("Rules")){
                     if(chosenCA == "RDCA"){
-                        RDCARules();
+                        RDCA_Rules_Tab();
                     }
                     ImGui.endTabItem();
                 }
                 /*--------------------------------------------------------------*/
                 if(ImGui.beginTabItem("Color")){
-
+                    if(chosenCA == "RDCA"){
+                        RDCA_Colors_Tab();
+                    }
                     ImGui.endTabItem();
                 }
                 /*--------------------------------------------------------------*/
@@ -89,35 +91,52 @@ public class CA_Console implements  SubGUI_Interface{
             CADriver.setRunningCA(chosenCA);
         }
         ImGui.sameLine();
-        if(ImGui.button("Stop")){
+        if(ImGui.button("Stop / Continue")){
             //CA continues to render same scene until start
-            CADriver.setRunningCA();
+            if(CADriver.getUpdate() == false){
+                CADriver.setUpdate(true);
+            }else{
+                CADriver.setUpdate(false);
+            }
         }
         ImGui.sameLine();
         if(ImGui.button("Reset")){ //reset the CA that is currently running (delete all Cells)
-
+            CADriver.setRunningCA();
         }
 
         ImGui.end();
     }
 
     //CA Rules:
-    private static void RDCARules(){
+    private static void RDCA_Rules_Tab(){
         if(ImGui.treeNode("Chemical A")){
-            ImGui.inputFloat("Diffusion Rate A", RDCAData.diffusionRateA);
+            ImGui.inputFloat("Diffusion Rate A", CADataBase.RDCADataInstance.diffusionRateA);
+
+            ImGui.newLine();
+            ImGui.inputFloat3("##input5", CADataBase.RDCADataInstance.neighborhoodA[0]);
+            ImGui.inputFloat3("Neighborhood##input6", CADataBase.RDCADataInstance.neighborhoodA[1]);
+            ImGui.inputFloat3("##input7", CADataBase.RDCADataInstance.neighborhoodA[2]);
+
             ImGui.treePop();
         }
         if(ImGui.treeNode("Chemical B")){
-            ImGui.inputFloat("Diffusion Rate B", RDCAData.diffusionRateB);
+            ImGui.inputFloat("Diffusion Rate B", CADataBase.RDCADataInstance.diffusionRateB);
+
+            ImGui.newLine();
+            ImGui.inputFloat3("##input4123123", CADataBase.RDCADataInstance.neighborhoodB[0]);
+            ImGui.inputFloat3("Neighborhood##input4354243", CADataBase.RDCADataInstance.neighborhoodB[1]);
+            ImGui.inputFloat3("##input982039", CADataBase.RDCADataInstance.neighborhoodB[2]);
+
             ImGui.treePop();
         }
         if(ImGui.treeNode("General")){
-            ImGui.inputFloat("Feed Rate", RDCAData.feedRate);
-            ImGui.inputFloat("Kill Rate", RDCAData.killRate);
+            ImGui.inputFloat("Feed Rate", CADataBase.RDCADataInstance.feedRate);
+            ImGui.inputFloat("Kill Rate", CADataBase.RDCADataInstance.killRate);
+            ImGui.inputFloat("dt", CADataBase.RDCADataInstance.dt);
+
             ImGui.newLine();
-            ImGui.inputFloat3("##input5", RDCAData.neighborhood[0]);
-            ImGui.inputFloat3("Neighborhood##input6", RDCAData.neighborhood[1]);
-            ImGui.inputFloat3("##input7", RDCAData.neighborhood[2]);
+            ImGui.inputInt2("Width Spawn Range", CADataBase.RDCADataInstance.dimensionRange[0]);
+            ImGui.inputInt2("Height Spawn Range", CADataBase.RDCADataInstance.dimensionRange[1]);
 
             ImGui.treePop();
         }
@@ -125,13 +144,15 @@ public class CA_Console implements  SubGUI_Interface{
     }
 
     //CA Colors:
+    private static void RDCA_Colors_Tab(){
+        ImGui.colorEdit3("Chemical A Color", CADataBase.RDCADataInstance.chemicalAColor);
+        ImGui.colorEdit3("Chemical B Color", CADataBase.RDCADataInstance.chemicalBColor);
+    }
 
     //CA Settings :
     private static ImInt cellSize = new ImInt(1);
-    private static ImInt rowsToRender = new ImInt(3);
     private static void CASettingTabItem(){
         ImGui.inputInt("Cell Size ", cellSize);
-        ImGui.inputInt("Rows to render", rowsToRender);
     }
 
 
@@ -159,8 +180,5 @@ public class CA_Console implements  SubGUI_Interface{
     public static int getCellSize() {
         return cellSize.get();
     }
-
-    public static int getRowsToRender() {
-        return rowsToRender.get();
-    }
+    public static String getChosenCA(){return chosenCA;}
 }

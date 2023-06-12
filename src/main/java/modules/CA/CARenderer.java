@@ -1,38 +1,22 @@
-package renderer;
+package modules.CA;
 
 import modules.CA.Cells.Cell;
+import org.joml.Vector2f;
+import renderer.RenderBatch;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Renderer {
-    private static int MAX_BATCH_SIZE = 1000;
-    private List<RenderBatch> batches;
+public abstract class CARenderer {
+    private int MAX_BATCH_SIZE;
 
-    public Renderer(){
-        this.batches = new ArrayList<>();
+    public CARenderer(int MAX_BATCH_SIZE){
+        this.MAX_BATCH_SIZE = MAX_BATCH_SIZE;
     }
 
-    public void add(Cell cell){ //adding a cell(square) to a batch
-        boolean added = false;
-        for(RenderBatch batch : batches){
-            if(batch.hasRoom()){
-                batch.addCell(cell);
-                added = true;
-                break;
-            }
-        }
-        if(!added){
-            RenderBatch batch = new RenderBatch(MAX_BATCH_SIZE);
-            batch.start();
-            batch.addCell(cell);
-            batches.add(batch);
-        }
+    public int getMAX_BATCH_SIZE() {
+        return MAX_BATCH_SIZE;
     }
 
-    public void render(){
-        for(RenderBatch batch : batches){
-            batch.render();
-        }
-    }
+    abstract public void render();
 }

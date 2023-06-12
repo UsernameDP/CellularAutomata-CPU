@@ -35,8 +35,8 @@ Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
 j  org.lwjgl.system.JNI.callPV(IIII[FJ)V+0
 j  org.lwjgl.opengl.GL11C.glGetTexImage(IIII[F)V+28
 j  org.lwjgl.opengl.GL11.glGetTexImage(IIII[F)V+6
-j  modules.CA.RDCA.RDCA_NextGen_ComputeShader.get_texture_values()[F+24
-j  modules.CA.RDCA.RDCA_NextGen_ComputeShader.computeNextGen([[F[[F)V+77
+j  modules.CA.RDCA.RDCA_Generation_ComputeShader.get_texture_values()[F+24
+j  modules.CA.RDCA.RDCA_Generation_ComputeShader.computeNextGen([[F[[F)V+77
 j  modules.CA.RDCA.RDCA.computeNextGen()V+12
 j  modules.CA.RDCA.RDCA.init()V+244
 J 928 c1 modules.GUI.SubGUI.CA_Console.render(Limgui/ImBool;)V (284 bytes) @ 0x0000022821469f04 [0x0000022821468e40+0x00000000000010c4]

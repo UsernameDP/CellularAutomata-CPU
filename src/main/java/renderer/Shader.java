@@ -2,11 +2,14 @@ package renderer;
 
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
+import org.joml.Vector2i;
+import org.joml.Vector3f;
 import org.lwjgl.BufferUtils;
 
 import java.io.IOException;
 import java.io.File;
 import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 import java.util.Scanner;
 
 import static org.lwjgl.opengl.GL20.*;
@@ -131,6 +134,7 @@ public class Shader {
         int varLocation = glGetUniformLocation(shaderProgram, varName);
         FloatBuffer matBuffer = BufferUtils.createFloatBuffer(16);
         mat4.get(matBuffer);
+        use();
         glUniformMatrix4fv(varLocation, false, matBuffer);
     }
 
@@ -139,16 +143,37 @@ public class Shader {
         use(); //to upload the value, you need to use the program
         glUniform1f(varLocation, val); //inserting the value to the varLocation
     }
-    public void uploadInt(String varName, int val){
+    public void uploadInt(String varName, int val) {
         int varLocation = glGetUniformLocation(shaderProgram, varName);
-        use(); //to upload the value, you need to use the program
-        glUniform1f(varLocation, val); //inserting the value to the varLocation
+        use();
+        glUniform1i(varLocation, val);
     }
 
+    public void uploadTexture(String varName, int slot) {
+        int varLocation = glGetUniformLocation(shaderProgram, varName);
+        use();
+        glUniform1i(varLocation, slot);
+    }
     public void uploadVec2(String varName, Vector2f vec2){
         int varLocation = glGetUniformLocation(shaderProgram, varName);
         FloatBuffer vecBuffer = BufferUtils.createFloatBuffer(2);
         vec2.get(vecBuffer);
+        use();
         glUniform2fv(varLocation, vecBuffer);
     }
+    public void uploadVec3(String varName, Vector3f vec3){
+        int varLocation = glGetUniformLocation(shaderProgram, varName);
+        FloatBuffer vecBuffer = BufferUtils.createFloatBuffer(3);
+        vec3.get(vecBuffer);
+        use();
+        glUniform3fv(varLocation, vecBuffer);
+    }
+    public void uploadiVec2(String varName, Vector2i ivec2){
+        int varLocation = glGetUniformLocation(shaderProgram, varName);
+        IntBuffer vecBuffer = BufferUtils.createIntBuffer(2);
+        ivec2.get(vecBuffer);
+        use();
+        glUniform2iv(varLocation, vecBuffer);
+    }
+
 }

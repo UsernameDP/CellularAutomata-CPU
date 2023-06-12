@@ -13,6 +13,7 @@ import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.glfw.GLFW.glfwShowWindow;
 import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL43.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
@@ -34,6 +35,7 @@ public class Window {
 
 
     public Window(){
+
         Window.width = SettingsFileHandler.settingsMap.get("windowwidth") == null ? 1920 : Integer.parseInt(SettingsFileHandler.settingsMap.get("windowwidth"));
         Window.height = SettingsFileHandler.settingsMap.get("windowheight") == null ? 1080 : Integer.parseInt(SettingsFileHandler.settingsMap.get("windowheight"));
         this.title = "Simulation_CA";
@@ -110,6 +112,7 @@ public class Window {
         float beginTime = (float)glfwGetTime();
         float endTime;
         Window.dt = -1.0f;
+
 
         while(!glfwWindowShouldClose(glfwWindow)){
             //Poll Events (any type of event)
