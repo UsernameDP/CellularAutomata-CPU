@@ -65,8 +65,6 @@ public class CAFileHandler extends FileHandler {
     }
 
     private static void loadRDCAData(String data){
-        System.out.println(data);
-
         try{
             ObjectMapper mapper = new ObjectMapper();
             RDCAData parsedData = mapper.readValue(data, RDCAData.class);

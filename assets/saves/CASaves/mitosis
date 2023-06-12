@@ -1,0 +1,2 @@
+RDCA
+{"diffusionRateA":1.0,"diffusionRateB":0.5,"feedRate":0.0367,"killRate":0.0649,"dt":1.0,"dimensionRange":[[900,950],[500,520]],"neighborhoodA":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"neighborhoodB":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"chemicalAColor":[9.9999E-7,1.0E-6,9.999994E-7],"chemicalBColor":[0.14704561,0.0,1.0]}

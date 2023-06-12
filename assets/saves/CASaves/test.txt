@@ -1,2 +1,2 @@
 RDCA
-{"diffusionRateA":1.0,"diffusionRateB":0.5,"feedRate":0.055,"killRate":0.062,"dt":1.0,"dimensionRange":[[900,950],[500,520]],"neighborhoodA":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"neighborhoodB":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"chemicalAColor":[0.11303344,0.11764705,0.117358714],"chemicalBColor":[0.045607444,0.6762762,0.71568626]}
+{"diffusionRateA":1.0,"diffusionRateB":0.5,"feedRate":0.055,"killRate":0.062,"dt":1.0,"dimensionRange":[[900,950],[500,520]],"neighborhoodA":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"neighborhoodB":[[0.05,0.2,0.05],[0.2,-1.0,0.2],[0.05,0.2,0.05]],"chemicalAColor":[9.9999E-7,1.0E-6,9.999994E-7],"chemicalBColor":[0.14704561,0.0,1.0]}
