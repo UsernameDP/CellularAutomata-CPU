@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3655dd3-dcde-4416-b05b-774845be8b47" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/hs_err_pid12512.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid18220.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid19144.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid23072.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid26096.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid520.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid7728.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid8360.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid8996.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
