@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3655dd3-dcde-4416-b05b-774845be8b47" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/shaders/RDCA.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/shaders/RDCA_NextGen.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid19144.log" beforeDir="false" afterPath="$PROJECT_DIR$/hs_err_pid19144.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid8360.log" beforeDir="false" afterPath="$PROJECT_DIR$/hs_err_pid8360.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/CADriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/CA/CADriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/CA_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/CA/CA_Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/Cells/Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/Cells/RDCA_Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/RDCA/RDCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/CA/RDCA/RDCA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/RDCA/RDCAData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/CA/RDCA/RDCAData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/CA/RDCA/RDCA_NextGen_ComputeShader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/FileHandlers/CAFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/FileHandlers/CAFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/GUI/SubGUI/CA_Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/GUI/SubGUI/CA_Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modules/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/ComputeShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/ComputeShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modules/CA/CARenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/renderer/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/renderer/Shader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid12512.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid18220.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid19144.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid23072.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid26096.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid520.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid7728.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid8360.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid8996.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,18 +65,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/devin/Downloads/Coding/IntelliJ/Simulation_CA - CPU",
-    "onboarding.tips.debug.path": "C:/Users/devin/Simulation_CA/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/devin/Downloads/Coding/IntelliJ/Simulation_CA - CPU&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/devin/Simulation_CA/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\devin\Downloads\Coding\IntelliJ\Simulation_CA\assets\shaders" />
